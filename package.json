@@ -1,0 +1,22 @@
+{
+  "name": "webserver-render",
+  "version": "1.0.0",
+  "description": "Web Server Node.js deployed on Render",
+  "main": "Internet2.js",
+  "scripts": {
+    "start": "node Internet2.js",
+    "dev": "node Internet2.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webserver",
+    "nodejs",
+    "render",
+    "deployment"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  }
+}
