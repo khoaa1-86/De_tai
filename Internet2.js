@@ -25,10 +25,10 @@ const server = http.createServer((req, res) => {
   if (pathname === '/api/data') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({
-      message: 'Đây là dữ liệu từ server Render',
+      message: 'Đây là dữ liệu từ server Vercel',
       status: 'success',
       timestamp: new Date().toISOString(),
-      environment: 'Render Deployment'
+      environment: 'Vercel Deployment'
     }));
     return;
   }
@@ -52,27 +52,27 @@ const server = http.createServer((req, res) => {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Trang Chủ - Web Server Render</title>
+        <title>Trang Chủ - Web Server Vercel</title>
         <style>
           * { margin: 0; padding: 0; box-sizing: border-box; }
           body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-          header { background: #1a1a2e; color: white; padding: 2rem; text-align: center; }
-          nav { background: #16213e; padding: 1rem; }
+          header { background: #000000; color: white; padding: 2rem; text-align: center; }
+          nav { background: #1a1a1a; padding: 1rem; }
           nav a { color: white; margin: 0 1rem; text-decoration: none; }
           nav a:hover { text-decoration: underline; }
           main { padding: 2rem; max-width: 1000px; margin: 0 auto; }
           .section { margin: 2rem 0; padding: 1.5rem; border: 1px solid #ddd; border-radius: 5px; }
-          .render-badge { background: #46d6ce; color: #1a1a2e; padding: 0.3rem 0.8rem; border-radius: 3px; font-weight: bold; display: inline-block; margin: 1rem 0; }
-          footer { background: #1a1a2e; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
-          button { background: #46d6ce; color: #1a1a2e; padding: 0.5rem 1rem; border: none; border-radius: 3px; cursor: pointer; font-weight: bold; }
-          button:hover { background: #3fb5a8; }
+          .vercel-badge { background: #000000; color: white; border: 2px solid #0070f3; padding: 0.3rem 0.8rem; border-radius: 3px; font-weight: bold; display: inline-block; margin: 1rem 0; }
+          footer { background: #000000; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+          button { background: #0070f3; color: white; padding: 0.5rem 1rem; border: none; border-radius: 3px; cursor: pointer; font-weight: bold; }
+          button:hover { background: #0051cc; }
         </style>
       </head>
       <body>
         <header>
-          <h1>🌐 Web Server Internet (Render Edition)</h1>
-          <p>Chào mừng đến với Web Server Node.js được Deploy trên Render</p>
-          <div class="render-badge">📡 Chạy trên Render</div>
+          <h1>🌐 Web Server Internet (Vercel Edition)</h1>
+          <p>Chào mừng đến với Web Server Node.js được Deploy trên Vercel</p>
+          <div class="vercel-badge">⚡ Chạy trên Vercel</div>
         </header>
         
         <nav>
@@ -84,13 +84,13 @@ const server = http.createServer((req, res) => {
         <main>
           <div class="section">
             <h2>📝 Giới Thiệu</h2>
-            <p>Đây là một Web Server được xây dựng bằng Node.js và deployed trên Render với các tính năng:</p>
+            <p>Đây là một Web Server được xây dựng bằng Node.js và deployed trên Vercel với các tính năng:</p>
             <ul style="margin-left: 2rem; margin-top: 1rem;">
               <li>✅ Xử lý các request HTTP</li>
               <li>✅ Cung cấp API RESTful</li>
               <li>✅ Phục vụ trang HTML động</li>
               <li>✅ Hỗ trợ JSON responses</li>
-              <li>✅ Deploy trên nền tảng Render</li>
+              <li>✅ Deploy trên nền tảng Vercel</li>
             </ul>
           </div>
           
@@ -112,18 +112,18 @@ const server = http.createServer((req, res) => {
             <div id="result" style="margin-top: 1rem; padding: 1rem; background: #f0f0f0; border-radius: 3px; display: none;"></div>
           </div>
           
-          <div class="section" style="background: #e8f4f8;">
-            <h2>🚀 Thông Tin Deployment</h2>
-            <p><strong>Nền tảng:</strong> Render</p>
+          <div class="section" style="background: #f0f4ff;">
+            <h2>⚡ Thông Tin Deployment</h2>
+            <p><strong>Nền tảng:</strong> Vercel</p>
             <p><strong>Runtime:</strong> Node.js</p>
-            <p><strong>Port:</strong> Dynamic (được thiết lập bởi Render)</p>
+            <p><strong>Port:</strong> Dynamic (được thiết lập bởi Vercel)</p>
             <p><strong>Trạng thái:</strong> ✅ Online</p>
           </div>
         </main>
         
         <footer>
           <p>&copy; 2026 Web Server Internet. Tất cả quyền được bảo lưu.</p>
-          <p>Deployed on <strong>Render</strong></p>
+          <p>Deployed on <strong>Vercel</strong></p>
         </footer>
         
         <script>
@@ -158,31 +158,32 @@ const server = http.createServer((req, res) => {
         <title>Về Chúng Tôi</title>
         <style>
           body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 2rem; }
-          h1 { color: #1a1a2e; }
-          a { color: #46d6ce; text-decoration: none; }
+          h1 { color: #000000; }
+          a { color: #0070f3; text-decoration: none; }
           a:hover { text-decoration: underline; }
         </style>
       </head>
       <body>
         <h1>Về Chúng Tôi</h1>
-        <p>Đây là trang giới thiệu về Web Server được xây dựng bằng Node.js và deployed trên Render.</p>
+        <p>Đây là trang giới thiệu về Web Server được xây dựng bằng Node.js và deployed trên Vercel.</p>
         <h2>Tính Năng:</h2>
         <ul>
           <li>Phục vụ trang HTML tĩnh</li>
           <li>Xử lý các request HTTP</li>
           <li>Cung cấp API RESTful</li>
-          <li>Auto-start khi Render restart</li>
+          <li>Auto-start khi Vercel restart</li>
           <li>Environment variables support</li>
         </ul>
         <h2>Deployment Platform:</h2>
-        <p>Server này được host trên <strong>Render</strong> - một nền tảng cloud modern để deploy ứng dụng web.</p>
-        <p>Ưu điểm của Render:</p>
+        <p>Server này được host trên <strong>Vercel</strong> - một nền tảng cloud hiện đại để deploy ứng dụng web.</p>
+        <p>Ưu điểm của Vercel:</p>
         <ul>
-          <li>Miễn phí cho tier cơ bản</li>
-          <li>Auto-deploy từ Git</li>
-          <li>SSL/TLS tự động</li>
-          <li>Environment variables support</li>
-          <li>Dễ dàng scale ứng dụng</li>
+          <li>Deployment nhanh chóng từ Git</li>
+          <li>Auto-deploy tự động</li>
+          <li>SSL/TLS và HTTPS tự động</li>
+          <li>Environment variables hỗ trợ đầy đủ</li>
+          <li>Global Edge Network</li>
+          <li>Preview deployments</li>
         </ul>
         <p><a href="/">← Quay lại trang chủ</a></p>
       </body>
@@ -201,12 +202,12 @@ const server = http.createServer((req, res) => {
         <title>Liên Hệ</title>
         <style>
           body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 2rem; }
-          h1 { color: #1a1a2e; }
+          h1 { color: #000000; }
           form { max-width: 500px; }
           input, textarea { width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ddd; border-radius: 3px; }
-          button { background: #46d6ce; color: #1a1a2e; padding: 0.5rem 1rem; border: none; border-radius: 3px; cursor: pointer; font-weight: bold; }
-          button:hover { background: #3fb5a8; }
-          a { color: #46d6ce; text-decoration: none; }
+          button { background: #0070f3; color: white; padding: 0.5rem 1rem; border: none; border-radius: 3px; cursor: pointer; font-weight: bold; }
+          button:hover { background: #0051cc; }
+          a { color: #0070f3; text-decoration: none; }
         </style>
       </head>
       <body>
@@ -248,21 +249,21 @@ const server = http.createServer((req, res) => {
   `);
 });
 
-// ⚠️ RENDER-SPECIFIC CONFIGURATION
-// Render sẽ set PORT qua environment variable
+// ⚠️ VERCEL-SPECIFIC CONFIGURATION
+// Vercel sẽ set PORT qua environment variable
 // Server phải listen trên 0.0.0.0 để chấp nhận kết nối từ bên ngoài
 const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0'; // Listen trên tất cả network interfaces
 
 server.listen(PORT, HOST, () => {
-  console.log(`🚀 Web Server Render đang chạy tại http://0.0.0.0:${PORT}`);
+  console.log(`⚡ Web Server Vercel đang chạy tại http://0.0.0.0:${PORT}`);
   console.log(`📋 Các route có sẵn:`);
   console.log(`   - GET / (Trang chủ)`);
   console.log(`   - GET /about (Giới thiệu)`);
   console.log(`   - GET /contact (Liên hệ)`);
   console.log(`   - GET /api/data (API dữ liệu)`);
   console.log(`   - GET /api/users (API danh sách người dùng)`);
-  console.log(`\n⚙️  Cấu hình Render:`);
+  console.log(`\n⚙️  Cấu hình Vercel:`);
   console.log(`   - PORT: ${PORT}`);
   console.log(`   - HOST: ${HOST}`);
   console.log(`   - Môi trường: ${process.env.NODE_ENV || 'production'}`);
@@ -274,9 +275,9 @@ server.on('error', (err) => {
   console.error('❌ Lỗi server:', err);
 });
 
-// Graceful shutdown - quan trọng cho Render
+// Graceful shutdown - quan trọng cho Vercel
 process.on('SIGTERM', () => {
-  console.log('\n📴 Server đang nhận tín hiệu SIGTERM từ Render...');
+  console.log('\n📴 Server đang nhận tín hiệu SIGTERM từ Vercel...');
   server.close(() => {
     console.log('✅ Server đã tắt một cách an toàn.');
     process.exit(0);

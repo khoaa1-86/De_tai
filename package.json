@@ -1,7 +1,7 @@
 {
-  "name": "webserver-render",
+  "name": "webserver-vercel",
   "version": "1.0.0",
-  "description": "Web Server Node.js deployed on Render",
+  "description": "Web Server Node.js deployed on Vercel",
   "main": "Internet2.js",
   "scripts": {
     "start": "node Internet2.js",
