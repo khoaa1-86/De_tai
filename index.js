@@ -255,13 +255,6 @@ const server = http.createServer((req, res) => {
 const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0'; // Listen trên tất cả network interfaces
 
-const path = require("path");
-
-// Serve trang chủ
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
 server.listen(PORT, HOST, () => {
   console.log(`⚡ Web Server Vercel đang chạy tại http://0.0.0.0:${PORT}`);
   console.log(`📋 Các route có sẵn:`);
